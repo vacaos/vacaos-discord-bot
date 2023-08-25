@@ -43,6 +43,12 @@ application {
     mainClass.set("vacaos.discord.bot.App")
 }
 
+tasks.withType<Jar> {
+    manifest {
+        attributes["Main-Class"] = "vacaos.discord.bot.App"
+    }
+}
+
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
